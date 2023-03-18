@@ -1,0 +1,206 @@
+
+/* =========== #CSS VARIABLES =============*/
+
+:root{
+    /* colors */
+    --primary-color:rgba(12, 127, 129, 1);
+    --title-color: rgba(0, 72, 87, 1);
+    --text-color: rgba(23, 182, 147, 1);
+    --p-color:rgba(41, 46, 49, 0.76);
+    --bg-color: hsl(216,18%,6%);
+    --bg-color-alt: hsl(213,10%,21%);
+    --container-color: hsl(217,18%,14%);
+    --border-color: hsl(210,2%,65%);
+    /* --first-gradient: linear-gradient(
+        0deg, var(--bg-color-alt) 0%,var(--bg-color) 100%);
+    --second-gradient: linear-gradient(
+        180deg, var(--bg-color-alt) 0%,var(--bg-color) 100%);
+    --third-gradient: linear-gradient(
+        0deg, var(--bg-color) 0%,var(--bg-color) 100%); */
+
+        /* typography */
+       --body-font: 'Roboto', sans-serif;
+       --biggest-font-size:68px;
+       --h1-font-size: 32px;
+       --h2-font-size: 20px;
+       --h3-font-size: 28px;
+       --h4-font-size: 24px;
+       --h5-font-size: 22px;
+       --p-font-siz:16px;
+       --largest-font-size: 21px;
+       --larger-font-size: 20px;
+       --large-font-size: 18px;
+       --normal-font-size: 16px;
+       --small-font-size: 15px;
+       --smaller-font-size: 14px;
+       --tiny-font-size: 13px;
+
+       /* shadow */
+       --shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);; 
+       /* transition */
+       --transition: cubic-bezier(0.3,0,0.3,1);
+}
+
+/* =================RESET============= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button,
+input,
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: #F8FFEF;
+}
+
+
+h1,h2,h3{
+    color: var(--title-color);
+    font-weight: 600;
+}
+ul{
+    list-style: none;
+}
+p{
+    color: var(--p-color);
+    line-height: 1.7;
+}
+a{
+    text-decoration: none;
+    
+}
+input,
+textarea,
+button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+button{
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+
+/*         REUSEABLE CSS CLASSES */
+
+.container{
+    max-width: 1300px;
+    margin-inline: auto;
+    padding-inline: 12px;
+} 
+
+ .grid{
+    display: grid;
+    gap: 24px;
+}
+.text-cs{
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 1;
+}
+
+.btn,
+.hero_link{
+    color: var(--title-color);
+    font-size: var(--tiny-font-size);
+    font-weight: 700;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.btn{
+    background-color: var(--text-color);
+    padding-inline: 12px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300 !important;
+    color: white !important;
+}
+
+.btn:hover{
+    background-color: rgba(82, 238, 205, 1);
+    color: var(--title-color) !important;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+/* .shape{
+    position: absolute;
+    filter: invert(1);
+    opacity: 0.6;
+} */
+
+.section{
+    padding: 6rem 0 2rem;
+}
+.section_title,
+.section_subtitle{
+    text-align: center;
+}
+
+.section_title{
+    font-size: var(--h1-font-size);
+}
+
+.section_subtitle{
+    color: var(--primary-color);
+    font-size: var(--smaller-font-size);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 60px;
+
+}
+
+.section_subtitle span{
+    font-family: var(--second-font);
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+.card{
+    
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+}
+.card-one{
+    padding: 30px 35px;
+    border-radius: 18px;
+}
+.card-two{
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.link{
+    display: inline-flex;
+    align-items: center;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.link_icon{
+    color: var(--primary-color);
+    margin-left: 20px;
+    transition: all 0.3s var(--transition)
+}
+.link:hover .link_icon{
+    margin-left: 15px;
+}
+
+.c_shape{
+    right:-24px;
+    bottom: -24px;
+    width: 141px;
+    height: 141px;
+}

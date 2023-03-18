@@ -1,0 +1,14 @@
+.facilities{
+    margin-top: 100px;
+}
+
+.facility h2{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.facility p{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-color);
+}
